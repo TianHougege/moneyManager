@@ -1,4 +1,4 @@
-import classNames from "classNames"; //classNames库用来动态管理和拼接 CSS 类名
+import classnames from "classnames"; //classnames库用来动态管理和拼接 CSS 类名
 import "./index.scss";
 import { useMemo, useState } from "react";
 import { billTypeToName } from "@/contants/index";
@@ -18,12 +18,12 @@ const DailyBill = ({ date, billList }) => {
 
   const [visible, setVisible] = useState(false);
   return (
-    <div className={classNames("dailyBill")}>
+    <div className={classnames("dailyBill")}>
       <div className="header">
         <div className="dateIcon">
           <span className="date">{date}</span>
           <span
-            className={classNames("arrow", visible && "expand")}
+            className={classnames("arrow", visible && "expand")}
             onClick={() => setVisible(!visible)}
           ></span>
         </div>
@@ -52,7 +52,7 @@ const DailyBill = ({ date, billList }) => {
               <div className="detail">
                 <div className="billType">{billTypeToName[item.useFor]}</div>
               </div>
-              <div className={classNames("money", item.type)}>
+              <div className={classnames("money", item.type)}>
                 {item.money.toFixed(2)}
               </div>
             </div>

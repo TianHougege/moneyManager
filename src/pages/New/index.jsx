@@ -1,7 +1,7 @@
 import { Button, DatePicker, Input, NavBar } from "antd-mobile";
 import Icon from "@/mainComponents/Icon";
 import "./index.scss";
-import classNames from "classNames";
+import classnames from "classnames";
 import { billListData } from "@/contants";
 import { useNavigate } from "react-router";
 import { useState } from "react";
@@ -49,13 +49,13 @@ const New = () => {
         <div className="kaType">
           <Button
             shape="rounded"
-            className={classNames(billtype === "pay" ? "selected" : "")}
+            className={classnames(billtype === "pay" ? "selected" : "")}
             onClick={() => setBilltype("pay")}
           >
             支出
           </Button>
           <Button
-            className={classNames(billtype === "income" ? "selected" : "")}
+            className={classnames(billtype === "income" ? "selected" : "")}
             shape="rounded"
             onClick={() => setBilltype("income")}
           >
@@ -103,7 +103,7 @@ const New = () => {
                 {item.list.map((item) => {
                   return (
                     <div
-                      className={classNames(
+                      className={classnames(
                         "item",
                         useFor === item.type ? "selected" : ""
                       )}

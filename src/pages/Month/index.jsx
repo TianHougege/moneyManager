@@ -1,6 +1,6 @@
 import { NavBar, DatePicker } from "antd-mobile";
 import { useEffect, useMemo, useState } from "react";
-import classNames from "classNames"; //classNames库用来动态管理和拼接 CSS 类名
+import classnames from "classnames"; //classnames库用来动态管理和拼接 CSS 类名
 import "./index.scss";
 import dayjs from "dayjs";
 import { useSelector } from "react-redux";
@@ -77,7 +77,7 @@ const Month = () => {
             {/* 日期对象不能直接渲染，加个字符串转换格式 */}
             {/* 思路：根据当前弹窗打开的状态控制expand类名是否存在 */}
             <span
-              className={classNames("arrow", dateVisible ? "expand" : "")}
+              className={classnames("arrow", dateVisible ? "expand" : "")}
             ></span>
           </div>
           {/* 统计区域 */}
